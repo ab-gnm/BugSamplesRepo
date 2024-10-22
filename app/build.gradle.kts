@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.agp.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.compose.compiler)
 }
 
@@ -60,6 +62,9 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.material)
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 
     implementation(libs.androidx.paging.runtime)
     implementation(libs.androidx.paging.compose)
