@@ -18,8 +18,8 @@ ksp = "2.0.21-1.0.25"
 agp = "8.7.1"
 hilt = "2.52"
 
-androidx-paging = "3.2.1"
-androidx-paging-compose = "3.2.1"
+androidx-paging = "3.3.2"
+androidx-paging-compose = "3.3.2"
 
 
 [libraries]
