@@ -43,6 +43,6 @@ class TestPagingSource : PagingSource<Int, Item>() {
     }
 
     companion object {
-        private const val ITEM_COUNT = 8
+        const val ITEM_COUNT = 5
     }
 }
