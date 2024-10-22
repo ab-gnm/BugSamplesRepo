@@ -1,8 +1,10 @@
 package com.example.flowtestapplication.paging
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
+import androidx.paging.cachedIn
 import com.example.flowtestapplication.paging.TestPagingSource.Companion.ITEM_COUNT
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -17,5 +19,7 @@ class PagingViewModel @Inject constructor() : ViewModel() {
         pagingSourceFactory = {
             TestPagingSource()
         },
-    ).flow
+    )
+        .flow
+        .cachedIn(viewModelScope)
 }
